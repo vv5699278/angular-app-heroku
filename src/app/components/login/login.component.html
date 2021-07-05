@@ -1,0 +1,35 @@
+<div class="login-page">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <h2>Login</h2>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"> Username</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button id="submit-btn" type="submit" class="btn btn-primary">Submit</button>                    
+                </form> 
+                <hr>
+                <!-- Social Media Login buttons -->
+                <div class="social-media-login-buttons">
+                    <button id="google-logib-btn" class="loginBtn loginBtn--google" #loginRef style="width: 50px;height: 50px; margin-right: 20px !important; border: none; margin: 0 auto; border-radius: 50%;color: #fff;font-weight: bolder; background-color: rgb(167, 34, 34)">
+                        g+
+                    </button>
+                    <button id="fb-logib-btn" class="loginBtn loginBtn--facebook" (click)="login()" style="width: 50px;height: 50px;border: none; margin: 0 auto; border-radius: 50%;color: #fff;font-weight: bolder; background-color: blue;">
+                        f
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

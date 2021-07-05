@@ -1,0 +1,59 @@
+<!-- <p>profile works!</p>
+<button (click)='logout()'>FB Sign out</button>
+<button (click)='signout()'>G Sign out</button> -->
+
+<div class="fb-profile-page login-page" *ngIf= "IsFBLogin">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+          
+                    <h2>FB Profile</h2>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="" class="form-label"> First Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="UserData.first_name" readonly  aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label"> Last Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="UserData.last_name" readonly aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label"> Email</label>
+                        <input type="text" class="form-control" [(ngModel)]="UserData.email" readonly aria-describedby="emailHelp">
+                    </div>                    
+           
+                <hr>
+                <!-- Social Media Login buttons -->
+                <div class="social-media-logout-buttons">
+                    <button (click)='logout()' class="btn btn-danger">Sign out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="google-profile-page login-page" *ngIf= "IsGoogleLogin">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+           
+                    <h2>Google Profile</h2>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"> Username</label>
+                        <input type="text" [(ngModel)]="UserData.Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input type="email" class="form-control" [(ngModel)]="UserData.Email" readonly>
+                    </div>                   
+
+                <hr>
+                <!-- Social Media Login buttons -->
+                <div class="social-media-logout-buttons">
+                    <button (click)='signout()' class="btn btn-danger">Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
