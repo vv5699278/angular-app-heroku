@@ -121,7 +121,7 @@ export class LoginComponent implements OnInit {
           this.tokenStorage.saveToken(response.authResponse.accessToken);
 
           window['FB'].api('/me', {
-            fields: 'last_name, first_name, email'
+            fields: 'last_name, first_name, email, birthday, hometown, gender, location, age_range'
           }, (userInfo) => {
  
             console.log("user information");
@@ -137,7 +137,7 @@ export class LoginComponent implements OnInit {
         } else {
           console.log('User login failed');
         }
-    }, {scope: 'email'});
+    }, {scope: 'email, user_birthday, user_hometown, user_gender, user_location, user_age_range'});
   }
 
 }
