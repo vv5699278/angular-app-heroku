@@ -93,7 +93,7 @@ export class LoginComponent implements OnInit {
  
     (window as any).fbAsyncInit = function() {
       window['FB'].init({
-        appId      : '501231094324500',
+        appId      : '1413474222356637',
         cookie     : true,
         xfbml      : true,
         version    : 'v3.1'
